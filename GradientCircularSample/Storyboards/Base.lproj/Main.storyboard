@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1UL-B0-8yW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="ibV-XI-Qsh">
+            <objects>
+                <viewController id="1UL-B0-8yW" customClass="MainViewController" customModule="GradientCircularSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e5y-Td-Tgq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cjb-GU-af4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <segue destination="3VA-at-c9R" kind="embed" id="fDk-UA-U6E"/>
+                                </connections>
+                            </containerView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="eMU-fB-K6A">
+                                <rect key="frame" x="16" y="630" width="343" height="37"/>
+                            </pageControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnM-vm-lep">
+                                <rect key="frame" x="20" y="527" width="335" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Vma-B4-IyW"/>
+                                </constraints>
+                                <string key="text">radius: 100.0
+line width: 30.0
+r: 100, g: 100, b: 100, a: 1.0
+r: 100, g: 100, b: 100, a: 1.0</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="11.5"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fnM-vm-lep" firstAttribute="leading" secondItem="PwE-Iq-sdb" secondAttribute="leading" constant="20" id="3ef-9O-7vW"/>
+                            <constraint firstItem="Cjb-GU-af4" firstAttribute="bottom" secondItem="PwE-Iq-sdb" secondAttribute="bottom" id="5LZ-Nh-LGh"/>
+                            <constraint firstItem="PwE-Iq-sdb" firstAttribute="bottom" secondItem="eMU-fB-K6A" secondAttribute="bottom" id="HEd-Q1-0gq"/>
+                            <constraint firstItem="PwE-Iq-sdb" firstAttribute="trailing" secondItem="fnM-vm-lep" secondAttribute="trailing" constant="20" id="NZO-Ol-sHt"/>
+                            <constraint firstItem="PwE-Iq-sdb" firstAttribute="trailing" secondItem="eMU-fB-K6A" secondAttribute="trailing" constant="16" id="T7c-EC-Uny"/>
+                            <constraint firstItem="Cjb-GU-af4" firstAttribute="leading" secondItem="PwE-Iq-sdb" secondAttribute="leading" id="iVJ-U7-XHr"/>
+                            <constraint firstItem="Cjb-GU-af4" firstAttribute="top" secondItem="e5y-Td-Tgq" secondAttribute="top" id="lDV-mm-hqF"/>
+                            <constraint firstItem="eMU-fB-K6A" firstAttribute="leading" secondItem="PwE-Iq-sdb" secondAttribute="leading" constant="16" id="nPK-VE-f6t"/>
+                            <constraint firstItem="PwE-Iq-sdb" firstAttribute="bottom" secondItem="fnM-vm-lep" secondAttribute="bottom" constant="60" id="oaH-nJ-swn"/>
+                            <constraint firstItem="Cjb-GU-af4" firstAttribute="trailing" secondItem="PwE-Iq-sdb" secondAttribute="trailing" id="w6K-hy-d95"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PwE-Iq-sdb"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="eMU-fB-K6A" id="M4r-m6-t8Q"/>
+                        <outlet property="textView" destination="fnM-vm-lep" id="ac7-ZY-VKd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wVz-ea-tC1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108" y="182.15892053973016"/>
+        </scene>
+        <!--Pages-->
+        <scene sceneID="mlI-pK-fkE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Pages" id="3VA-at-c9R" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JMi-2B-qVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="770" y="182"/>
+        </scene>
+    </scenes>
+</document>

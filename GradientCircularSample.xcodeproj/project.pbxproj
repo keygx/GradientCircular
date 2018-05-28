@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3608BF5720BC041D00BFB403 /* ArcDefaultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3608BF5620BC041D00BFB403 /* ArcDefaultType.swift */; };
 		36A336E120B6ABE400644D11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A336E020B6ABE400644D11 /* AppDelegate.swift */; };
 		36A336E620B6ABE400644D11 /* Pages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36A336E420B6ABE400644D11 /* Pages.storyboard */; };
 		36A336E820B6ABE400644D11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A336E720B6ABE400644D11 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3608BF5620BC041D00BFB403 /* ArcDefaultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcDefaultType.swift; sourceTree = "<group>"; };
 		36A336DD20B6ABE400644D11 /* GradientCircularSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GradientCircularSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A336E020B6ABE400644D11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36A336E520B6ABE400644D11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Pages.storyboard; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				36A3371020B6ACF100644D11 /* AlphaValueArcImage.swift */,
 				36A3371120B6ACF100644D11 /* GradientColorArcView.swift */,
 				36A3370F20B6ACF100644D11 /* SingleColorArcView.swift */,
+				3608BF5620BC041D00BFB403 /* ArcDefaultType.swift */,
 			);
 			path = Arcs;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3608BF5720BC041D00BFB403 /* ArcDefaultType.swift in Sources */,
 				36A3370D20B6ACE000644D11 /* UIColor+Ex.swift in Sources */,
 				36A3371320B6ACF100644D11 /* AlphaValueArcImage.swift in Sources */,
 				36A3370A20B6ACC200644D11 /* GradientCircularConf.swift in Sources */,

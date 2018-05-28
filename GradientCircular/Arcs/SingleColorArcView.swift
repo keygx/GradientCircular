@@ -8,14 +8,13 @@
 
 import UIKit
 
-class SingleColorArcView: UIView {
+class SingleColorArcView: UIView, ArcDefaultType {
     var style: GradientCircularConf.Style?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = UIColor.clear
-        isOpaque = true
+        inirialize()
     }
     
     required init?(coder aDecoder: NSCoder) {

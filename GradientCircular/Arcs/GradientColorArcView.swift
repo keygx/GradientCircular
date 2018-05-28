@@ -8,14 +8,13 @@
 
 import UIKit
 
-class GradientColorArcView: UIView {
+class GradientColorArcView: UIView, ArcDefaultType {
     var style: GradientCircularConf.Style?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = UIColor.clear
-        isOpaque = true
+        inirialize()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -53,15 +52,6 @@ class GradientColorArcView: UIView {
             context.setLineCap(style.lineCap)
             context.strokePath()
         }
-    }
-}
-
-extension GradientColorArcView {
-    func drawImage(style: GradientCircularConf.Style) -> UIImage {
-        self.style = style
-        let image = self.toUIImage()
-        
-        return image
     }
 }
 

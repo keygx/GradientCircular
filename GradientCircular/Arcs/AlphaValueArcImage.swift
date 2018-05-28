@@ -22,11 +22,11 @@ class AlphaValueArcImage {
             gradientMaskView.style = style.setColorGrayScale(startAlpha: style.gradient.start.toRGBA().a,
                                                              endAlpha: style.gradient.end.toRGBA().a,
                                                              clockwise: true)
-            let gradientMaskImage = gradientMaskView.toUIImage()
+            let gradientMaskImage = gradientMaskView.toUIImage(alpha: 1.0)
             
             let solidMaskView = SingleColorArcView(frame: style.rect)
             solidMaskView.style = style.setColorSingle(color: style.gradient.start)
-            let solidMaskImage = solidMaskView.toUIImage()
+            let solidMaskImage = solidMaskView.toUIImage(alpha: 1.0)
             
             let image = mask(image: solidMaskImage, maskImage: gradientMaskImage)
             
@@ -39,11 +39,11 @@ class AlphaValueArcImage {
             gradientMaskView.style = style.setColorGrayScale(startAlpha: style.gradient.start.toRGBA().a,
                                                              endAlpha: style.gradient.end.toRGBA().a,
                                                              clockwise: false)
-            let gradientMaskImage = gradientMaskView.toUIImage()
+            let gradientMaskImage = gradientMaskView.toUIImage(alpha: 1.0)
             
             let solidMaskView = SingleColorArcView(frame: style.rect)
             solidMaskView.style = style.setColorSingle(color: style.gradient.end)
-            let solidMaskImage = solidMaskView.toUIImage()
+            let solidMaskImage = solidMaskView.toUIImage(alpha: 1.0)
             
             let image = mask(image: solidMaskImage, maskImage: gradientMaskImage)
             

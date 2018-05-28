@@ -9,7 +9,10 @@
 import UIKit
 
 extension UIView {
-    func toUIImage() -> UIImage {
+    func toUIImage(alpha: CGFloat) -> UIImage {
+        if alpha < 1.0 {
+            self.alpha = alpha
+        }
         let scale = UIScreen.main.scale
         UIGraphicsBeginImageContextWithOptions(self.frame.size, false, scale)
         self.layer.render(in: UIGraphicsGetCurrentContext()!)

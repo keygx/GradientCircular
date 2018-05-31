@@ -63,5 +63,35 @@
             </objects>
             <point key="canvasLocation" x="1683" y="960"/>
         </scene>
+        <!--Single Color View Controller-->
+        <scene sceneID="D8l-lZ-Zem">
+            <objects>
+                <viewController storyboardIdentifier="SingleColorViewController" id="9fL-Sb-XHC" customClass="SingleColorViewController" customModule="GradientCircularSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GZk-Tz-t6L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="PxW-fD-H8i"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q8h-DZ-mu1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2406" y="960"/>
+        </scene>
+        <!--Single Alpha Color View Controller-->
+        <scene sceneID="Kii-2a-96X">
+            <objects>
+                <viewController storyboardIdentifier="SingleAlphaColorViewController" id="dUu-gJ-oze" customClass="SingleAlphaColorViewController" customModule="GradientCircularSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B7j-e7-z8V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="CkD-B5-Jhh"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LIG-xa-Ma8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3108" y="960"/>
+        </scene>
     </scenes>
 </document>

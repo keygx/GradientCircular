@@ -26,7 +26,9 @@ class PagesViewController: UIPageViewController {
         
         pageViewControllers = [createInstance(identifier: "BlueArcViewController"),
                                createInstance(identifier: "OrageClearArcViewController"),
-                               createInstance(identifier: "AlphaCompositeViewController")]
+                               createInstance(identifier: "AlphaCompositeViewController"),
+                               createInstance(identifier: "SingleColorViewController"),
+                               createInstance(identifier: "SingleAlphaColorViewController")]
         
         setViewControllers([pageViewControllers.first!], direction: .forward, animated: true, completion: nil)
         dataSource = self

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3608BF5720BC041D00BFB403 /* ArcDefaultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3608BF5620BC041D00BFB403 /* ArcDefaultType.swift */; };
+		365E992520BFC3A0008BCCCD /* SingleAlphaColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365E992420BFC3A0008BCCCD /* SingleAlphaColorViewController.swift */; };
+		365E992720BFC409008BCCCD /* SingleColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365E992620BFC409008BCCCD /* SingleColorViewController.swift */; };
 		36A336E120B6ABE400644D11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A336E020B6ABE400644D11 /* AppDelegate.swift */; };
 		36A336E620B6ABE400644D11 /* Pages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36A336E420B6ABE400644D11 /* Pages.storyboard */; };
 		36A336E820B6ABE400644D11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A336E720B6ABE400644D11 /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 
 /* Begin PBXFileReference section */
 		3608BF5620BC041D00BFB403 /* ArcDefaultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcDefaultType.swift; sourceTree = "<group>"; };
+		365E992420BFC3A0008BCCCD /* SingleAlphaColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleAlphaColorViewController.swift; sourceTree = "<group>"; };
+		365E992620BFC409008BCCCD /* SingleColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleColorViewController.swift; sourceTree = "<group>"; };
 		36A336DD20B6ABE400644D11 /* GradientCircularSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GradientCircularSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A336E020B6ABE400644D11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36A336E520B6ABE400644D11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Pages.storyboard; sourceTree = "<group>"; };
@@ -181,6 +185,8 @@
 				36C7099220B9A40E00F37044 /* BlueArcViewController.swift */,
 				36C7099120B9A40E00F37044 /* OrageClearArcViewController.swift */,
 				36EE5D1620BA691D00511C9C /* AlphaCompositeViewController.swift */,
+				365E992620BFC409008BCCCD /* SingleColorViewController.swift */,
+				365E992420BFC3A0008BCCCD /* SingleAlphaColorViewController.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -338,9 +344,11 @@
 			files = (
 				36E3F77420BAB0660028685F /* UIColor+Ex.swift in Sources */,
 				36C7099320B9A40E00F37044 /* OrageClearArcViewController.swift in Sources */,
+				365E992520BFC3A0008BCCCD /* SingleAlphaColorViewController.swift in Sources */,
 				36A336E120B6ABE400644D11 /* AppDelegate.swift in Sources */,
 				36C7099420B9A40E00F37044 /* BlueArcViewController.swift in Sources */,
 				36EE5D1720BA691D00511C9C /* AlphaCompositeViewController.swift in Sources */,
+				365E992720BFC409008BCCCD /* SingleColorViewController.swift in Sources */,
 				36C7099620B9AF0500F37044 /* PagesViewController.swift in Sources */,
 				36C7099E20B9AFA400F37044 /* MainViewController.swift in Sources */,
 			);

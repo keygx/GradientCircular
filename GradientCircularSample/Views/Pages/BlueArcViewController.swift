@@ -16,7 +16,7 @@ class BlueArcViewController: UIViewController, PageItemType {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.darkGray
+        view.backgroundColor = UIColor.lightGray
         drawGradientCircular()
     }
     

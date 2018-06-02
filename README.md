@@ -3,7 +3,7 @@
 Customizable gradient circular Image and ImageView library in Swift.
 
 ## Requirements
-- Swift 4.0
+- Swift 4.1
 - iOS 9.0 or later
 
 ## Screen Shots

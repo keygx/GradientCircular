@@ -28,7 +28,7 @@ class AlphaValueArcImage {
             solidMaskView.style = style.setColorSingle(color: style.gradient.start)
             let solidMaskImage = solidMaskView.toUIImage(alpha: 1.0)
             
-            let image = mask(image: solidMaskImage, maskImage: gradientMaskImage)
+            let image = solidMaskImage.mask(image: gradientMaskImage)
             
             return image
         }()
@@ -45,7 +45,7 @@ class AlphaValueArcImage {
             solidMaskView.style = style.setColorSingle(color: style.gradient.end)
             let solidMaskImage = solidMaskView.toUIImage(alpha: 1.0)
             
-            let image = mask(image: solidMaskImage, maskImage: gradientMaskImage)
+            let image = solidMaskImage.mask(image: gradientMaskImage)
             
             return image
         }()
@@ -58,39 +58,30 @@ class AlphaValueArcImage {
 }
 
 extension AlphaValueArcImage {
-    func mask(image: UIImage, maskImage: UIImage) -> UIImage {
-        let maskRef: CGImage = maskImage.cgImage!
-        let mask: CGImage = CGImage(
-            maskWidth: maskRef.width,
-            height: maskRef.height,
-            bitsPerComponent: maskRef.bitsPerComponent,
-            bitsPerPixel: maskRef.bitsPerPixel,
-            bytesPerRow: maskRef.bytesPerRow,
-            provider: maskRef.dataProvider!,
-            decode: nil,
-            shouldInterpolate: false)!
-        
-        let maskedImageRef: CGImage = image.cgImage!.masking(mask)!
-        let scale = UIScreen.main.scale
-        let maskedImage: UIImage = UIImage(cgImage: maskedImageRef, scale: scale, orientation: .up)
-        
-        return maskedImage
-    }
-    
     func composite(image1: UIImage, image2: UIImage, style: GradientCircularConf.Style) -> UIImage {
-        let scale = UIScreen.main.scale
-        UIGraphicsBeginImageContextWithOptions(image1.size, false, scale)
-        image1.draw(
-            in: CGRect(x: 0, y: 0, width: image1.size.width, height: image1.size.height),
-            blendMode: .overlay,
-            alpha: style.gradient.start.toRGBA().a)
-        image2.draw(
-            in: CGRect(x: 0, y: 0, width: image2.size.width, height: image2.size.height),
-            blendMode: .overlay,
-            alpha: style.gradient.end.toRGBA().a)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        return image!
+        if #available(iOS 10.0, *) {
+            let rect = CGRect(x: 0, y: 0, width: image1.size.width, height: image1.size.height)
+            let renderer = UIGraphicsImageRenderer(size: image1.size)
+            return renderer.image { rendererContext in
+                rendererContext.cgContext.setFillColor(UIColor.clear.cgColor)
+                rendererContext.fill(rect)
+                image1.draw(in: rect, blendMode: .overlay, alpha: style.gradient.start.toRGBA().a)
+                image2.draw(in: rect, blendMode: .overlay, alpha: style.gradient.end.toRGBA().a)
+            }
+        } else {
+            let scale = UIScreen.main.scale
+            UIGraphicsBeginImageContextWithOptions(image1.size, false, scale)
+            image1.draw(
+                in: CGRect(x: 0, y: 0, width: image1.size.width, height: image1.size.height),
+                blendMode: .overlay,
+                alpha: style.gradient.start.toRGBA().a)
+            image2.draw(
+                in: CGRect(x: 0, y: 0, width: image2.size.width, height: image2.size.height),
+                blendMode: .overlay,
+                alpha: style.gradient.end.toRGBA().a)
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            return image!
+        }
     }
 }

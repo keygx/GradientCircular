@@ -24,6 +24,7 @@
 		36A3371220B6ACF100644D11 /* SingleColorArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3370F20B6ACF100644D11 /* SingleColorArcView.swift */; };
 		36A3371320B6ACF100644D11 /* AlphaValueArcImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3371020B6ACF100644D11 /* AlphaValueArcImage.swift */; };
 		36A3371420B6ACF100644D11 /* GradientColorArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3371120B6ACF100644D11 /* GradientColorArcView.swift */; };
+		36BD8A7F20DA654B00EE4FC1 /* UIImage+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BD8A7E20DA654B00EE4FC1 /* UIImage+Ex.swift */; };
 		36C7099320B9A40E00F37044 /* OrageClearArcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C7099120B9A40E00F37044 /* OrageClearArcViewController.swift */; };
 		36C7099420B9A40E00F37044 /* BlueArcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C7099220B9A40E00F37044 /* BlueArcViewController.swift */; };
 		36C7099620B9AF0500F37044 /* PagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C7099520B9AF0500F37044 /* PagesViewController.swift */; };
@@ -77,6 +78,7 @@
 		36A3370F20B6ACF100644D11 /* SingleColorArcView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleColorArcView.swift; sourceTree = "<group>"; };
 		36A3371020B6ACF100644D11 /* AlphaValueArcImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaValueArcImage.swift; sourceTree = "<group>"; };
 		36A3371120B6ACF100644D11 /* GradientColorArcView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientColorArcView.swift; sourceTree = "<group>"; };
+		36BD8A7E20DA654B00EE4FC1 /* UIImage+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ex.swift"; sourceTree = "<group>"; };
 		36C7099120B9A40E00F37044 /* OrageClearArcViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrageClearArcViewController.swift; sourceTree = "<group>"; };
 		36C7099220B9A40E00F37044 /* BlueArcViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueArcViewController.swift; sourceTree = "<group>"; };
 		36C7099520B9AF0500F37044 /* PagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagesViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				36A3370B20B6ACE000644D11 /* UIColor+Ex.swift */,
+				36BD8A7E20DA654B00EE4FC1 /* UIImage+Ex.swift */,
 				36A3370C20B6ACE000644D11 /* UIView+Ex.swift */,
 			);
 			path = Extensions;
@@ -362,6 +365,7 @@
 				36A3370D20B6ACE000644D11 /* UIColor+Ex.swift in Sources */,
 				36A3371320B6ACF100644D11 /* AlphaValueArcImage.swift in Sources */,
 				36A3370A20B6ACC200644D11 /* GradientCircularConf.swift in Sources */,
+				36BD8A7F20DA654B00EE4FC1 /* UIImage+Ex.swift in Sources */,
 				36A3370520B6AC2700644D11 /* GradientCircular.swift in Sources */,
 				36A3371220B6ACF100644D11 /* SingleColorArcView.swift in Sources */,
 				36A3371420B6ACF100644D11 /* GradientColorArcView.swift in Sources */,

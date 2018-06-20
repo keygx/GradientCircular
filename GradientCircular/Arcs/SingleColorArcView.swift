@@ -34,9 +34,9 @@ class SingleColorArcView: UIView, ArcDefaultType {
                        radius: arcRadius,
                        startAngle: arcStartAngle,
                        endAngle: arcEndAngle,
-                       clockwise: true)
+                       clockwise: false)
         
-        context.setStrokeColor(style.gradient.start.cgColor)
+        context.setStrokeColor(style.gradient.end.cgColor)
         context.setLineWidth(style.lineWidth)
         context.setLineCap(style.lineCap)
         context.strokePath()
